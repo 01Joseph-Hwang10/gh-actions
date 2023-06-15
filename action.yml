@@ -10,6 +10,6 @@ runs:
     # Forwards merge using forward-merge.sh
     - id: forward-merge
       shell: bash
-      run: ./forward-merge.sh
+      run: forward-merge.sh
       env:
         FORWARD_TO: ${{ inputs.branch }}
