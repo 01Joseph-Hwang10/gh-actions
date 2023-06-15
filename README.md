@@ -1,20 +1,13 @@
-# Useful Github Actions
+# Forward Merge
 
-This repository contains set of useful Github Actions.
+Forward merge is a GitHub action that performs a forward merge from a current branch to a target branch.
+
+This action is useful for keeping a branch up to date with a target branch.
 
 ## Usage
 
-This repository has numbers of branches that are used to store different actions performing different tasks. To use an action, you need to specify the branch name in the `uses` field of the action.
-
-For example, if you want to use the `forward-merge` action, you need to specify the branch name `forward-merge` in the `uses` field of the action.
-
 ```yaml
-uses: 01Joseph-Hwang/gh-actions@forward-merge
+uses: 01Joseph-Hwang10/gh-actions@forward-merge
+with:
+    branch: <target-branch>
 ```
-
-## Reference
-
-- https://docs.github.com/en/actions/quickstart
-- https://stackoverflow.com/questions/69705595/github-actions-multiple-action-in-a-single-repo
-- https://www.jameskerr.blog/posts/sharing-steps-in-github-action-workflows/
-
