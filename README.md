@@ -10,6 +10,8 @@ For example, if you want to use the `forward-merge` action, you need to specify 
 
 ```yaml
 uses: 01Joseph-Hwang/gh-actions@forward-merge
+with:
+    branch: <branch-name>
 ```
 
 ## Reference
