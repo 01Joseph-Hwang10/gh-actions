@@ -1,15 +1,8 @@
-name: Forward Merge
-description: Forward Merge to specified branch
-inputs:
-  branch:
-    description: "Branch to merge to"
-    required: true
-runs:
-  using: "composite"
-  steps:
-    # Forwards merge using forward-merge.sh
-    - id: forward-merge
-      shell: bash
-      run: ./forward-merge.sh
-      env:
-        FORWARD_TO: ${{ inputs.branch }}
+name: Empty Action
+description: "An empty action for main branch"
+runs-on: ubuntu-latest
+steps:
+  - uses: actions/checkout@v2
+  - name: Empty Action
+    run: |
+      echo "Empty Action"
