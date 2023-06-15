@@ -10,5 +10,5 @@ git config --local user.name "Github Actions"
 git fetch --unshallow
 git checkout -f $FORWARD_TO --
 git pull
-git merge --no-ff master -m "Auto-merge master to $FORWARD_TO"
+git merge --no-ff master -m "chore: Auto-merge master to $FORWARD_TO"
 git push
