@@ -7,9 +7,11 @@ inputs:
 runs:
   using: "composite"
   steps:
-    # Forwards merge using forward-merge.sh
-    - id: forward-merge
+    - run: ls
       shell: bash
-      run: ./forward-merge.sh
+  
+    # Forwards merge using forward-merge.sh
+    - run: ./forward-merge.sh
+      shell: bash
       env:
         FORWARD_TO: ${{ inputs.branch }}
