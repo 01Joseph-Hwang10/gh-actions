@@ -15,4 +15,5 @@ runs:
     - run: forward-merge.sh
       shell: bash
       env:
-        FORWARD_TO: ${{ inputs.branch }}
+        MERGE_FROM: ${{ inputs.from }}
+        FORWARD_TO: ${{ inputs.to }}
