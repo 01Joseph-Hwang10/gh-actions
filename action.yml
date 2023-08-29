@@ -1,8 +1,11 @@
 name: Forward Merge
 description: Forward Merge to specified branch
 inputs:
-  branch:
-    description: "Branch to merge to"
+  from:
+    description: "The source branch to merge from."
+    required: true
+  to:
+    description: "The target branch to merge to."
     required: true
 runs:
   using: "composite"
