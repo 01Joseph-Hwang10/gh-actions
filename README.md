@@ -4,6 +4,8 @@ Forward merge is a GitHub action that performs a forward merge from one branch t
 
 This action is useful for keeping a branch up to date with a target branch.
 
+Note that once a branch is merged, it returns to the original branch (i.e. `from` branch).
+
 ## Usage
 
 ```yaml
