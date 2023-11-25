@@ -1,17 +1,19 @@
 name: Sync With Source
 description: "Fetches the latest changes from the source repository."
 runs-on: ubuntu-latest
-steps:
-  # Set-up git user
-  - name: Set-up git user
-    run: |
-      set -e
-      git config user.name "github-actions[bot]"
-      git config user.email "github-actions[bot]@users.noreply.github.com"
+runs:
+  using: "composite"
+  steps:
+    # Set-up git user
+    - name: Set-up git user
+      run: |
+        set -e
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
 
-  # Sync the source to the latest commit
-  - name: Sync source
-    run: |
-      set -e
-      git fetch --unshallow
-      git pull
+    # Sync the source to the latest commit
+    - name: Sync source
+      run: |
+        set -e
+        git fetch --unshallow
+        git pull
