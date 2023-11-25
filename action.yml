@@ -6,6 +6,7 @@ runs:
   steps:
     # Set-up git user
     - name: Set-up git user
+      shell: bash
       run: |
         set -e
         git config user.name "github-actions[bot]"
@@ -13,6 +14,7 @@ runs:
 
     # Sync the source to the latest commit
     - name: Sync source
+      shell: bash
       run: |
         set -e
         git fetch --unshallow
