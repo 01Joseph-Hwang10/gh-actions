@@ -1,8 +1,17 @@
-name: Empty Action
-description: "An empty action for main branch"
+name: Sync With Source
+description: "Fetches the latest changes from the source repository."
 runs-on: ubuntu-latest
 steps:
-  - uses: actions/checkout@v2
-  - name: Empty Action
+  # Set-up git user
+  - name: Set-up git user
     run: |
-      echo "Empty Action"
+      set -e
+      git config user.name "github-actions[bot]"
+      git config user.email "github-actions[bot]@users.noreply.github.com"
+
+  # Sync the source to the latest commit
+  - name: Sync source
+    run: |
+      set -e
+      git fetch --unshallow
+      git pull
